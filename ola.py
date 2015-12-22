@@ -11,15 +11,17 @@ class MinhaClasse(object):
         print(*args, end='\n\n')
 
     def show_python_version(self):
-        self.print('[ Python version %s ]' % sys.version)
+        self.print('[ Python version {0} ]'.format(sys.version))
 
     def ping(self, url):
         with sb.Popen('ping -n 1 ' + url, stdout=sb.PIPE) as ps:
             return ps.wait() == 0
 
     def executar(self, func, args):
-        self.print('%s(%r)' % (func.__name__, args))
-        func(args)
+        retorno = func(args)
+
+        self.print('Executou... {0}({1!r}) => {2}'.format(
+            func.__name__, args, retorno))
 
 
 ###
@@ -38,8 +40,8 @@ class MeuTeste(unittest.TestCase):
 
 
 if __name__ == '__main__':
-    MinhaClasse().show_python_version()
-
-    # MinhaClasse().executar(ping, 'uol.com.br')
+    minhaClasse = MinhaClasse()
+    minhaClasse.show_python_version()
+    minhaClasse.executar(minhaClasse.ping, 'uol.com.br')
 
     unittest.main()
