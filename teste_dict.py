@@ -1,11 +1,14 @@
+def print_eval(text):
+    print(text, '->', eval(text))
+
 dict = {}
 
-print('dict', dict)
-print("dict.get('A')", dict.get('A'))
-print('dict', dict)
-print("dict.get('A', [])", dict.get('A', []))
-print('dict', dict)
-print("dict.setdefault('A', [])", dict.setdefault('A', []))
-print('dict', dict)
-print("dict.setdefault('A', 'A')", dict.setdefault('A', 'A'))
-print('dict', dict)
+print_eval("dict")
+print_eval("dict.get('A')")
+print_eval("dict")
+print_eval("dict.get('A', [])")
+print_eval("dict")
+print_eval("dict.setdefault('A', [])")
+print_eval("dict")
+print_eval("dict.setdefault('A', 'A')")
+print_eval("dict")
