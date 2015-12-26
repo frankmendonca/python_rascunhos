@@ -51,7 +51,8 @@ class MeuApp(Tk):
         MeuFrame(self)
 
     def center_window(self):
-        self.eval('tk::PlaceWindow %s center' % self.winfo_pathname(self.winfo_id()))
+        self.eval('tk::PlaceWindow {} center'.format(
+            self.winfo_pathname(self.winfo_id())))
 
     def show(self):
         self.center_window()
