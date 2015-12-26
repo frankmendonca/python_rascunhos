@@ -1,11 +1,13 @@
 A = input()
 
+
 def mostra_sequencia(palavra):
     palavra = ''.join(sorted(palavra))
 
     for seq, letra in enumerate(palavra):
         print(letra)
         proxima_sequencia(palavra, letra, seq+1)
+
 
 def proxima_sequencia(palavra, letra, seq):
     if seq < len(palavra):
