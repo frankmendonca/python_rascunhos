@@ -1,14 +1,14 @@
-def print_eval(text):
+def eval_and_print(text):
     print(text, '->', eval(text))
 
 dict = {}
 
-print_eval("dict")
-print_eval("dict.get('A')")
-print_eval("dict")
-print_eval("dict.get('A', [])")
-print_eval("dict")
-print_eval("dict.setdefault('A', [])")
-print_eval("dict")
-print_eval("dict.setdefault('A', 'A')")
-print_eval("dict")
+eval_and_print("dict")
+eval_and_print("dict.get('A')")
+eval_and_print("dict")
+eval_and_print("dict.get('A', [])")
+eval_and_print("dict")
+eval_and_print("dict.setdefault('A', [])")
+eval_and_print("dict")
+eval_and_print("dict.setdefault('A', 'A')")
+eval_and_print("dict")
