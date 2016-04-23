@@ -3,7 +3,7 @@ import sys
 
 def println(*args, **kwargs):
     """
-    Faz a mesma coisa que o print, mas pula mais uma lina (\\n\\n) (por padrão)
+    Faz a mesma coisa que o print, mas pula mais uma linha (\\n\\n) (por padrão)
     """
     kwargs.setdefault('end', '\n\n')
     print(*args, **kwargs)
