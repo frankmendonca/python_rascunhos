@@ -5,7 +5,7 @@ from tkinter import messagebox
 class MeuFrame(Frame):
 
     def __init__(self, master=None):
-        Frame.__init__(self, master)
+        super().__init__(master)
         self._nome = StringVar()
         self.create_widgets()
         self.pack()
